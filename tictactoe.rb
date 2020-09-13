@@ -111,6 +111,9 @@ class Board
     elsif ((@spaces[1] != " " && @spaces[1] == @spaces[5] && @spaces[5] == @spaces[9]) || (@spaces[3] != " " && @spaces[3] == @spaces[5] && @spaces[5] == @spaces[7]))
       puts "Congratulations, #{name.capitalize}! You win!"
       return true
+    elsif (!@spaces.has_value? (" "))
+      puts "It's a tie!"
+      return true
     else
       #move did not win the game
       return false
